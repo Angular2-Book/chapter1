@@ -19,8 +19,16 @@ module.exports = function (grunt) {
                 target: 'es5',
                 failOnTypeErrors: false
             }
+        },
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js'
+            }
         }
     });
     grunt.loadNpmTasks("grunt-ts");
+    grunt.loadNpmTasks('grunt-karma');
     grunt.registerTask("angular2-compile", ["ts"]);
+    grunt.registerTask('karma-test', 'karma');
+
 };

@@ -6,6 +6,7 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "outDir": "./app",
+        "rootDir": "./ts-app",
         "sourceMap": true,
         "moduleResolution": "node",
         "experimentalDecorators": true,
