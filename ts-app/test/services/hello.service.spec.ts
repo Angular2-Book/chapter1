@@ -18,7 +18,6 @@ describe('HelloService', function() {
         };
 
     beforeEach(() => {
-
         TestBed.configureTestingModule({
             providers: [
                 {
@@ -33,10 +32,7 @@ describe('HelloService', function() {
         });
     });
 
-
-    it('should get message', inject([MockBackend, HelloService], (mockBackend, service) => {
-        //let fixture = TestBed.createComponent(AppComponent);
-        // expect(fixture.componentInstance instanceof AppComponent).toBe(true, 'should create AppComponent');
+    it('should get message', inject([MockBackend, HelloService], (mockBackend, service) => {       
         mockBackend.connections.subscribe(
             (connection: MockConnection) => {
                 connection.mockRespond(new Response(
@@ -45,7 +41,6 @@ describe('HelloService', function() {
                     }
                     )));
             });
-
         service.getHello().subscribe((res: Hello[]) => {
             expect(res).toBe("test one");
         });

@@ -3,12 +3,8 @@ import { HelloService } from '../services/hello.service';
 import { MockHelloService } from '../services/mock/hello.mock.service';
 import { inject } from '@angular/core/testing';
 import { Http} from '@angular/http';
-
-
 import { async,  TestBed } from '@angular/core/testing';
-
 import { By } from '@angular/platform-browser';
-
 
 describe('Smoke test', () => {
   it('should run a passing test', () => {
@@ -34,5 +30,3 @@ describe('AppComponent with TCB', function () {
 
  
 });
-
-
